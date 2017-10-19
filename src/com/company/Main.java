@@ -1,8 +1,75 @@
 package com.company;
 
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.lang.System.in;
+import static java.lang.System.setOut;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+
+        String csvFile = "/Users/BilalZahid/Documents/GitHub/word-analysis/positive-words.csv";
+        String csvFile1 = "/Users/BilalZahid/Documents/GitHub/word-analysis/negative-words.csv";
+        String[] negativeWord = new String[0];
+        String[] positiveWord = new String[0];
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+
+            String str;
+
+            List<String> list = new ArrayList<String>();
+            while ((str = br.readLine()) != null) {
+                list.add(str);
+            }
+
+
+            positiveWord = list.toArray(new String[0]);
+
+            System.out.println(positiveWord[0]);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile1))) {
+
+            String str;
+
+            List<String> list = new ArrayList<String>();
+            while ((str = br.readLine()) != null) {
+                list.add(str);
+            }
+
+
+            negativeWord = list.toArray(new String[0]);
+
+            System.out.println(negativeWord[0]);
+
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+        
+        String hello = "agonising";
+        for (int i = 0; i < positiveWord.length; i++) {
+
+
+            if (hello.equals(positiveWord[i])) {
+
+                System.out.println("Positive");
+            }
+        }
+        for (int i = 0; i < negativeWord.length; i++) {
+            if (hello.equals(negativeWord[i])) {
+                System.out.println("Negative");
+            }
+        }
     }
 }
