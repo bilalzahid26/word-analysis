@@ -15,8 +15,8 @@ public class Main {
     public static void main(String[] args) {
 
 
-        String csvFile = "/Users/BilalZahid/Documents/GitHub/word-analysis/positive-words.csv";
-        String csvFile1 = "/Users/BilalZahid/Documents/GitHub/word-analysis/negative-words.csv";
+        String csvFile = "/Users/BilalZahid/Desktop/Computer Science/GitHub/word-analysis/src/negative-words.csv";
+        String csvFile1 = "/Users/BilalZahid/Desktop/Computer Science/GitHub/word-analysis/src/positive-words.csv";
         String[] negativeWord = new String[0];
         String[] positiveWord = new String[0];
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
