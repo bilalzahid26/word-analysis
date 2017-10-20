@@ -7,8 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.System.in;
-import static java.lang.System.setOut;
+
 
 public class Main {
 
